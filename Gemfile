@@ -42,7 +42,7 @@ gem "thruster", require: false
 gem "simple_form", "~> 5.1.0"
 
 
-gem "redis", "~> 4.2"
+gem "redis", "~> 5.4"
 
 gem "devise", "~> 4.9.0"
 
