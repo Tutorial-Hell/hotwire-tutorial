@@ -1,0 +1,38 @@
+.line-item-date {
+  margin-top: var(--space-xxl);
+  margin-bottom: var(--space-xs);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xs);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+    margin-top: 10px;
+
+    @include media(tabletAndUp) {
+      font-size: var(--font-size-xxl);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--space-xs);
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.action-button {
+  margin-top: 10px;
+}
