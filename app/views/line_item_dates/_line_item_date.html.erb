@@ -10,8 +10,9 @@
     <div class="button-container">
     <div class="action-button">
     <%= button_to "Delete",
-     [quote, line_item_date],
+     quote_line_item_date_path(quote, line_item_date),
      method: :delete,
+     form: { data: {turbo_confirm: "Are you sure"}},
      class: "btn btn--light"%>
     </div>
 
