@@ -11,6 +11,7 @@ class LineItemDatesController < ApplicationController
 
     if @line_item_date.save
       redirect_to quote_path(@quote), notice: "Date was successfully created"
+
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +30,10 @@ class LineItemDatesController < ApplicationController
 
   def destroy
     @line_item_date.destroy
-    redirect_to quote_path(@quote), notice: "Date was successfully destroyed"
+    respond_to do |format|
+      format.html { redirect_to quote_path(@quote), notice: "Date was successfully destroyed" }
+      format.turbo_stream { flash.now[:notice] = "Date was successfully destroyed" }
+    end
   end
 
   private
