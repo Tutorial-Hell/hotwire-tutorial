@@ -3,6 +3,8 @@
 <div class="line_item_date">
     <%= turbo_frame_tag dom_id(line_item_date, :edit) do%>
     <div class="line_item_date__header">
+
+        <div class="header-items">
         <h2 class="line_item_date__title">
             <%= l(line_item_date.date, format: :long) %>
         </h2>
@@ -22,6 +24,7 @@
         <%= link_to "Edit",
             [:edit, quote, line_item_date],
             class: "btn btn--light" %>
+            </div>
             </div>
             </div>
             </div>
